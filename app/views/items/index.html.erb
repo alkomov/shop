@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Каталог товаров:</h1>
+  <div class="row">
+    <ul class="nav nav-pills mb-3">
+    <li class="nav-item">
+      <%= link_to 'Все', items_path, class: "#{'active' if !@current_category} nav-link" %>
+    </li>
+    <% @categories.each do |category| %>
+      <li class="nav-item">
+        <%= link_to category.name, items_path(category_id: category.id), class: "#{'active' if @current_category == category.id} nav-link" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div class="row">
+    <% @items.each do |item| %>
+     <%= render partial: "card", locals: { item: item } %>
+    <% end %>
+  </div>
+</div>

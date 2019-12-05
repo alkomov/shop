@@ -9,6 +9,26 @@
   </head>
 
   <body>
-    <%= yield %>
+  	<div id="container">
+   <header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Электрон</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <%= link_to "Каталог", items_path, class: "#{cp(items_path)} nav-link" %>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+  <%= yield %>
+  <footer class="p-3 bg-light container-fluid">
+  	<span>© 2019 - Электрон — интернет-магазин товаров.</span>
+  </footer>
+</div>
   </body>
 </html>

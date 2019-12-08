@@ -1,0 +1,10 @@
+<h2>Привет! Поступил новый заказ в магазин</h2>
+<p>Новый заказ <strong>№<%= @order.id %></strong> успешно создан!</p>
+<h3>Данные пользователя:</h3>
+<p><strong>Имя:</strong> <%= @order.name %></p>
+<p><strong>Телефон:</strong> <%= @order.phone %></p>
+<p><strong>Почта:</strong> <%= @order.email %></P>
+<h3>Список товаров:</h3>
+<% @order.items_formatted.each do |item| %>
+  <p><%= item[:item].title %>: <strong><%= item[:count] %></strong></p>
+<% end %>

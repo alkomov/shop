@@ -3,7 +3,6 @@
   <head>
     <title>Shop</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,6 +19,8 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <%= link_to "Каталог", items_path, class: "#{cp(items_path)} nav-link" %>
+        <%= link_to(carts_path, { class: "btn btn-light" }) do %> Корзина <span class="badge badge-danger"><%= current_cart.count %></span>
+  <% end %>
       </li>
     </ul>
   </div>

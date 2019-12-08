@@ -5,8 +5,11 @@
       <h5><%= item.title %></h5>
       <p class="card-text"><%= item.description %></p>
     </div>
-    <div class="card-footer bg-white text-right">
+    <div class="card-footer bg-white d-flex align-items-center">
       <strong><%= number_to_currency(item.price, precision: 0, unit: "", delimiter: " ") %>р.</strong>
-    </div>
+      <div class="bg-white d-flex align-items-center">
+  <%= link_to('В корзину', '/', class: 'btn btn-primary mr-auto' ) %>
+</div>    
+</div>
   </div>
 </div>

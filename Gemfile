@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'activeadmin', '~> 2.4.0'
-gem 'devise', '~> 4.6.1'
+gem 'devise', '~> 4.7.1'
 gem 'paperclip', '~> 6.1.0'
 
 group :development, :test do

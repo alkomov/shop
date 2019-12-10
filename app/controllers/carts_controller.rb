@@ -3,4 +3,4 @@ class CartsController < ApplicationController
     @items_in_cart = Item.where(id: current_cart)
      @order = Order.new
   end
-endo
+end

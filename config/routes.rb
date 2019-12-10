@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 	resources :items, only: :index do
     post :add_to_cart, on: :member
     delete :delete_from_cart, on: :member
+end
     resources :orders, only: :create do
   get :success, on: :member
-end
 end
 end
